@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/CSS/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+  
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container" id=>
         <h2>Survey Questions</h2>
         <hr>
 
@@ -29,7 +27,7 @@
 
         <h3><strong>Question 1</strong></h3>
         <h4>I sometimes like to explore out of sheer curiosity.</h4>
-        <select class="chosen-select" id="q1">
+        <select class="custom-select custom-select-sm" id="q1">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -40,7 +38,7 @@
 
         <h3><strong>Question 2</strong></h3>
         <h4>You are looking for a friend to be a jogging companion.</h4>
-        <select class="chosen-select" id="q2">
+        <select class="custom-select custom-select-sm" id="q2">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -51,7 +49,7 @@
 
         <h3><strong>Question 3</strong></h3>
         <h4>You find it easy to stay relaxed even when the mail is being delivered.</h4>
-        <select class="chosen-select" id="q3">
+        <select class="custom-select custom-select-sm" id="q3">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -62,7 +60,7 @@
 
         <h3><strong>Question 4</strong></h3>
         <h4>Taking a walk is the perfect afternoon activity.</h4>
-        <select class="chosen-select" id="q4">
+        <select class="custom-select custom-select-sm" id="q4">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -73,7 +71,7 @@
 
         <h3><strong>Question 5</strong></h3>
         <h4>I prefer to toss a frisbee or ball at the beach to unwind.</h4>
-        <select class="chosen-select" id="q5">
+        <select class="custom-select custom-select-sm" id="q5">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -84,7 +82,7 @@
 
         <h3><strong>Question 6</strong></h3>
         <h4>Loyalty is the most important trait in a companion.</h4>
-        <select class="chosen-select" id="q6">
+        <select class="custom-select custom-select-sm" id="q6">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -94,8 +92,8 @@
         </select>
 
         <h3><strong>Question7</strong></h3>
-        <h4>I get realy upset when there are unexpected visitors.</h4>
-        <select class="chosen-select" id="q7">
+        <h4>I get really upset when there are unexpected visitors at my house.</h4>
+        <select class="custom-select custom-select-sm" id="q7">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -105,8 +103,8 @@
         </select>
 
         <h3><strong>Question 8</strong></h3>
-        <h4></h4>
-        <select class="chosen-select" id="q8">
+        <h4>I hate being cooped up indoors.</h4>
+        <select class="custom-select custom-select-sm" id="q8">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -116,8 +114,8 @@
         </select>
 
         <h3><strong>Question 9</strong></h3>
-        <h4></h4>
-        <select class="chosen-select" id="q9">
+        <h4>I love a good nap in the middle of the day.</h4>
+        <select class="custom-select custom-select-sm" id="q9">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -127,8 +125,8 @@
         </select>
 
         <h3><strong>Question 10</strong></h3>
-        <h4></h4>
-        <select class="chosen-select" id="q10">
+        <h4>I prefer to stay in and cuddle on the couch over going out.</h4>
+        <select class="custom-select custom-select-sm" id="q10">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -142,17 +140,23 @@
         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
             <i class="fa fa-check-circle"></i> Submit</button>
 
+        <br>
 
     </div>
 
+    <footer>
+        <div class="container">
+            <a href="api/friends">API Friends List |</a>
+            <a href="/"> Home </a>
+        </div>
+    </footer>
+
+
 </body>
 
-<footer>
-
-    <a href="api/friends">API Friends List </a>
-
-</footer>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
 
 
 </html>
