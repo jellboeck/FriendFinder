@@ -1,7 +1,7 @@
 var friendArray = [
     {
         name: "Riley",
-        photo:"https://i.dailymail.co.uk/1s/2018/10/25/20/5415664-6317535-image-m-38_1540494351143.jpg",
+        photo:"images/riley.jpg",
         scores:[
             "4",
             "4",
@@ -18,7 +18,7 @@ var friendArray = [
 
     },{
         name: "Chloe",
-        photo:"http://3.bp.blogspot.com/_NNj7EUl-Hz0/ScbFuRxFOaI/AAAAAAAAAWM/t0UjFm6lshM/s400/beverly_hills_chihuahua_chloe1.jpg",
+        photo:"images/chloe.jpg",
         scores:[
             "1",
             "1",
@@ -33,7 +33,7 @@ var friendArray = [
         ]
     },{
         name: "Jack",
-        photo:"https://cdn3-www.dogtime.com/assets/uploads/gallery/jack-russel-terrier-dog-breed-pictures/2-face.jpg",
+        photo:"images/jack.jpg",
         scores:[
             "5",
             "4",
@@ -49,7 +49,7 @@ var friendArray = [
         ]
     },{
         name: "Maggie",
-        photo:"https://canna-pet.com/wp-content/uploads/2017/07/pug-2498523_1280-e1501624125740.jpg",
+        photo:"images/maggie.jpg",
         scores:[
             "3",
             "1",
@@ -64,7 +64,7 @@ var friendArray = [
         ]
     },{
         name: "Toby",
-        photo:"https://www.edhat.com/sites/default/files/news_image/dawg_laurenmaeve_2-14.jpg",
+        photo:"images/toby.jpg",
         scores:[
             "4",
             "5",
@@ -79,7 +79,7 @@ var friendArray = [
         ]
     },{
         name: "Finn",
-        photo:"https://kyrapets.com/wp-content/uploads/2019/08/Dachshund.jpeg",
+        photo:"images/finn.jpg",
         scores:[
             "2",
             "2",
@@ -94,7 +94,7 @@ var friendArray = [
         ]
     },{
         name: "Molly",
-        photo:"https://www.dailydogtag.com/wp-content/uploads/2015/06/Casey-Hendrickson-Photography-Westie-lifestyle-dog-photography.jpg",
+        photo:"images/molly.jpg",
         scores:[
             "2",
             "1",
@@ -110,7 +110,7 @@ var friendArray = [
         ]
     },{
         name: "Cody",
-        photo:"https://i.pinimg.com/originals/7c/8a/ed/7c8aeda56e378273046d1fb0b1126f40.jpg",
+        photo:"images/cody.jpg",
         scores:[
             "5",
             "5",
