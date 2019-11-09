@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../assets/CSS/style.css">
-  
+
 </head>
 
 <body>
@@ -151,23 +151,34 @@
         </div>
     </footer>
 
-    <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Your Friend Match!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Your Friend Match!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <img id="matchPhoto" src="" width="350px" alt="">
+                </div>
             </div>
-            <div class="modal-body">
-              <h2 id="matchName"></h2>
-              <img id="matchPhoto" src="" width= "350px" alt="">
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
+    <div id="surveyIncomplete" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-body">
+                        <p id="incomplete">!/p>
+                    </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="https://code.jquery.com/jquery.js"></script>
@@ -175,62 +186,63 @@
 <script type="text/javascript">
 
 
-$("#submit").on("click", function(){
-    console.log("click")
-    function valSurvey() {
-        var isValid = true;
-        $(".form-control").each(function() {
-            if ($(this).val() === ""){
-                isValid = false;
-            }
-        });
+    $("#submit").on("click", function () {
+        console.log("click")
+        function valSurvey() {
+            var isValid = true;
+            $(".form-control").each(function () {
+                if ($(this).val() === "") {
+                    isValid = false;
+                }
+            });
 
-        $(".chosen-select").each(function(){
-            if ($(this).val() === ""){
-                isValid = false;
-            }
-        });
-        return isValid;
+            $(".chosen-select").each(function () {
+                if ($(this).val() === "") {
+                    isValid = false;
+                }
+            });
+            return isValid;
 
-    }
+        }
 
-    if (valSurvey()){
-        var userData = {
-            name: $("#name").val().trim(),
-            photo: $("#photo").val().trim(),
-            scores: [
-                $("#q1").val(),
-                $("#q2").val(),
-                $("#q3").val(),
-                $("#q4").val(),
-                $("#q5").val(),
-                $("#q6").val(),
-                $("#q7").val(),
-                $("#q8").val(),
-                $("#q9").val(),
-                $("#q10").val()
-            ]
-        };
+        if (valSurvey()) {
+            var userData = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
 
-        console.log(userData)
+            console.log(userData)
 
-        var currentURL = window.location.origin;
+            var currentURL = window.location.origin;
 
-        $.post(currentURL + "/api/friends", userData, function(data) {
-            
-            $("#matchName").text(data.name);
-            console.log(data.name);
-            $("#matchPhoto").attr("src" , data.photo);
-            console.log(data.photo);
-            $("#resultsModal").modal("toggle");
-            
-           
-        });
-    }
-    else {
-        alert("Please finish the survey!")
-    }
-});
+            $.post(currentURL + "/api/friends", userData, function (data) {
+
+                $("#matchName").text(data.name);
+                console.log(data.name);
+                $("#matchPhoto").attr("src", data.photo);
+                console.log(data.photo);
+                $("#resultsModal").modal("toggle");
+
+
+            });
+        }
+        else {
+            $("#incomplete").text("Survey incomplete! Please finish the survey to continue.");
+            $("#surveyIncomplete").modal("toggle");
+        }
+    });
 
 </script>
 
